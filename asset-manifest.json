@@ -1,0 +1,10 @@
+{
+  "files": {
+    "main.js": "/luvfume/static/js/main.579a7a5a.js",
+    "index.html": "/luvfume/index.html",
+    "main.579a7a5a.js.map": "/luvfume/static/js/main.579a7a5a.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.579a7a5a.js"
+  ]
+}
