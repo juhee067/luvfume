@@ -1,0 +1,33 @@
+header {
+
+
+    .lf_wrap {
+        display: flex;
+        line-height: 60px;
+
+
+    }
+
+    h1 {
+        padding-right: 10px;
+
+        img {
+            width: 70%;
+        }
+
+    }
+
+
+
+    .Gnb {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    nav ul {
+        display: flex;
+        gap: 30px;
+    }
+
+}
