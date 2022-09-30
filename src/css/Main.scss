@@ -1,4 +1,4 @@
-main {
+main {position: relative;
     .animated-title {
         font-size: 200px;
         font-weight: 400;
@@ -10,6 +10,7 @@ main {
         overflow-x: hidden;
         overflow-y: hidden;
         border-bottom: 2px solid #000;
+        
     }
 
     .animated-subtitle {
@@ -22,8 +23,8 @@ main {
         padding: 45px 0;
         overflow-x: hidden;
         overflow-y: hidden;
-        border-bottom: 2px solid #000;
-
+        
+       
     }
 
     .animated-title .track {
@@ -40,6 +41,8 @@ main {
         white-space: nowrap;
         will-change: transform;
         animation: marqueeR 30s linear infinite;
+        border-bottom: 2px solid #000;
+        z-index: 1;
 
     }
 
@@ -64,6 +67,41 @@ main {
     }
 
 
-
+    .trxVdo {
+        width: 732px;
+        height: 682px;
+        overflow: hidden;
+        position: absolute;
+        top: 10%;
+        left: 50%;
+        transform: translateX(-50%);
+        border-radius: 362px 362px 0 0;
+      
+    }
+    .trxVdo iframe {
+        position: absolute;
+        bottom: -91px;
+        left: 50%;
+        transform: translateX(-50%);
+     
+    }
+ 
+   
+   .cover {
+   opacity: 0;
+        position: absolute;
+        top: 10%;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index:3;  
+        transition: 0.5s;
+        
+    }
+   .cover:hover {
+    opacity: 100;
+      
+        
+    }
+ 
 
 }

@@ -1,16 +1,13 @@
 import Header from "./components/Header";
-import Main from "./components/Main";
-import Gift from "./components/Gift";
+import Visaul from "./components/Visaul";
 
 const App = () => {
   return (
     <>
       <Header />
       <main>
-        <Main />
-        <Gift />
+        <Visaul />
       </main>
-
     </>
   );
 };

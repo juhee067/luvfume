@@ -17,4 +17,61 @@ const top_banner = [
   },
 ];
 
-export { top_banner };
+const NAVLINKL = [
+  {
+    id: 1,
+    menu: "SHOP",
+    link: "/",
+    submenu: [
+      {
+        id: 1,
+        menu: "ALL",
+        link: "/recommand/cake",
+      },
+      {
+        id: 2,
+        menu: "HAND CARE ",
+        link: "/recommand/gift",
+      },
+      {
+        id: 3,
+        menu: "BODY CARE",
+        link: "/recommand/gift",
+      },
+      {
+        id: 4,
+        menu: "GIFT SET ",
+        link: "/recommand/gift",
+      },
+      {
+        id: 5,
+        menu: "ACC",
+        link: "/recommand/gift",
+      },
+    ],
+  },
+  {
+    id: 2,
+    menu: "BRAND",
+    link: "/",
+    submenu: [
+      {
+        id: 1,
+        menu: "BRAND STORY",
+        link: "/recommand/cake",
+      },
+      {
+        id: 2,
+        menu: "CONTACT",
+        link: "/recommand/gift",
+      },
+    ],
+  },
+  { id: 3, menu: "CAMPAIGN", link: "/" },
+];
+const NAVLINKR = [
+  { id: 1, menu: "LOGIN", link: "/" },
+  { id: 2, menu: "ACCOUNT", link: "/" },
+];
+
+export { top_banner, NAVLINKL, NAVLINKR };

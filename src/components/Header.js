@@ -1,50 +1,48 @@
-
+import React, { useState } from "react";
 import TopBanner from "./TopBanner";
-import { Link } from "react-router-dom";
-import '../css/Header.scss'
+import { Link, NavLink } from "react-router-dom";
+import "../css/Header.scss";
+import { NAVLINKL, NAVLINKR } from "../data/common";
 
-const NAVLINKL = [
-  { id: 1, menu: "SHOP", link: "/" },
-  { id: 2, menu: "BRAND", link: "/" },
-  { id: 3, menu: "CAMPAIGN", link: "/" },
-];
-const NAVLINKR = [
-  { id: 1, menu: "LOGIN", link: "/" },
-  { id: 2, menu: "ACCOUNT", link: "/" },
-];
-
-const Header = () => {
-
+const Header = ({}) => {
+  const [togglePop, setTogglePop] = useState(false);
   return (
     <header className="Header">
       <TopBanner />
       <div className="lf_wrap inner">
         <h1>
           <Link to="/">
-            <img src={process.env.PUBLIC_URL + '/assests/images/logo.png'} alt="" />
+            <img
+              src={process.env.PUBLIC_URL + "/assests/images/logo.png"}
+              alt=""
+            />
           </Link>
         </h1>
         <nav className="Gnb inner">
-          <ul>
+          <ul id="major">
             {NAVLINKL.map((it, idx) => {
               return (
-                <li key={it.id}>
-                  <a href={it.link}>{it.menu}</a>
-                </li>
-              );
-            })}
-          </ul>
-          <ul>
-            {NAVLINKR.map((it, idx) => {
-              return (
-                <li key={it.id}>
-                  <a href={it.link}>{it.menu}</a>
+                <li
+                  key={it.id}
+                  onClick={() => {
+                    setTogglePop(false);
+                  }}
+                >
+                  <NavLink to={it.link}>{it.menu}</NavLink>
+                  <ul className="smenu">
+                    {it.submenu.map((s_it, idx) => {
+                      return (
+                        <li key={s_it.id}>
+                          <Link to={s_it.link}>{s_it.menu}</Link>
+                        </li>
+                      );
+                    })}
+                  </ul>
                 </li>
               );
             })}
           </ul>
         </nav>
-
       </div>
     </header>
   );
